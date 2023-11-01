@@ -1,0 +1,467 @@
+<div id="gsp_container">
+    <form>
+        <!-- main //-->
+        <div id="gsp_main" class="gsp_step">
+            <img decoding="async" src="https://billd.com/wp-content/plugins/get-started/img/contractors.png">
+            <h2>Let’s Get Started.</h2>
+            <p>Here’s an easy one – which one are you?</p>
+            <div class="gsp_options">
+                <div class="gsp_option">
+                    <input id="gsp_recordtype_0" type="radio" name="recordtype" value="contractor" class="gsp_radio">
+                    <label for="gsp_recordtype_0">Contractor</label>
+                </div>
+                <div class="gsp_option">
+                    <input id="gsp_recordtype_1" type="radio" name="recordtype" value="supplier" class="gsp_radio">
+                    <label for="gsp_recordtype_1">Supplier</label>
+                </div>
+                <div class="gsp_option">
+                    <input id="gsp_recordtype_2" type="radio" name="recordtype" value="affiliate" class="gsp_radio">
+                    <label for="gsp_recordtype_2">Affiliate</label>
+                </div>
+            </div>
+            <div id="gspgr_recordtype" class="gsp_tooltip gsp_hidden">
+                <span id="gsp_info_recordtype_0" class="gsp_hidden">
+                    <b>Awesome!</b>
+                    We’re excited to learn about what you build.</span>
+                <span id="gsp_info_recordtype_1" class="gsp_hidden">
+                    <b>Perfect!</b>
+                    Let’s learn more about what you sell and who you sell it to.
+                </span>
+                <span id="gsp_info_recordtype_2" class="gsp_hidden">
+                    <b>Great!</b>
+                     We’d love to work with you.</span>
+            </div>
+            <button id="gspb_main" type="button" class="gsp_button gsp_notactive hvr-icon-forward">NEXT </button>
+        
+        </div>
+
+        <!-- contractor //-->
+        <div id="gsp_contractor" class="gsp_step" style="display:none">
+            <img decoding="async" src="https://billd.com/wp-content/plugins/get-started/img/contractors.png">
+            <h2>Excellent.</h2>
+            <p>What kind of projects do you primarily work on?</p>
+            <div class="gsp_options2">
+                <div class="gsp_option">
+                    <input id="gsp_contractor_0" type="radio" name="contractortype" value="commercial" class="gsp_radio">
+                    <label for="gsp_contractor_0">Commercial</label>
+                </div>
+                <div class="gsp_option">
+                    <input id="gsp_contractor_1" type="radio" name="contractortype" value="residential" class="gsp_radio">
+                    <label for="gsp_contractor_1">Residential</label>
+                </div>
+            </div>
+            <div id="gspgr_contractor" class="gsp_tooltip gsp_hidden">
+                <span id="gsp_info_contractor_0" class="gsp_hidden"><b>Nice!</b> Let’s keep going here.</span>
+                <span id="gsp_info_contractor_1" class="gsp_hidden">
+                    <b>Got it!</b>
+                    Let’s move on.
+                </span>
+            </div>
+            <button id="gspb_contractor" type="button" class="gsp_button  gsp_notactive hvr-icon-forward">NEXT</button>
+            <div class="gsp_back" onclick="gspa_back('contractor', 'main')"></div>
+                <div class="loggi">Already have an account? <a href="https://app.billd.com/login" target="_blank">Login</a></div>
+        </div>
+
+
+        
+        <div id="gsp_commercial_schedule" style="display:none">
+            <div id="gsp_commercial_calendar"></div>
+            <div class="gsp_back" onclick="gspa_back('commercial_schedule', 'contractor')"></div>
+        </div>
+
+
+
+        <!-- contractor commercial //-->
+        <div id="gsp_contractor_commercial" style="display:none">
+            <div class="gsp_flex">
+                <div class="gsp_form_left">
+           
+          
+            <h3>Enter your email to begin enrollment.</h3>
+
+                    <input id="gsp_contractor_commercial_email" class="gsp_input" placeholder="Enter your email address" onkeyup="gsp_email_check(this)">
+                    <button id="gspb_contractor_commercial" type="button" class="gsp_button gsp_submit  gsp_notactive hvr-icon-forward">NEXT</button>
+
+                        <p class="gsp_small">
+                        By continuing, you accept Billd’s <a href="https://billd.com/terms-of-use">Terms of Use</a> and
+                        <a href="https://billd.com/privacy-policy">Privacy Policy</a>.
+                    </p>
+
+                    <div class="gsp_back" onclick="gspa_back('contractor_commercial', 'contractor')"></div>
+
+                </div>
+                <div class="gsp_form_info">
+                    <div class="gsp_row">
+                        <div class="gsp_row_icon"><img decoding="async" src="https://billd.com/wp-content/plugins/get-started/img/circle.png"></div>
+                        <div class="gsp_row_text">
+                            <strong>Fast approval and processing</strong>
+                            Fund materials as quickly as same-day.
+                        </div>
+                    </div>
+                    <div class="gsp_row">
+                        <div class="gsp_row_icon"><img decoding="async" src="https://billd.com/wp-content/plugins/get-started/img/chart.png"></div>
+                        <div class="gsp_row_text">
+                            <strong>120-day terms</strong>
+                            We’ll pay for your materials up-front and give you
+                            120 days to repay it.
+                        </div>
+                    </div>
+                    <div class="gsp_row">
+                        <div class="gsp_row_icon"><img decoding="async" src="https://billd.com/wp-content/plugins/get-started/img/houses.png">
+                        </div>
+                        <div class="gsp_row_text">
+                            <strong>Focus on building, stress free</strong>
+                            Focus your time on what you do best, building cool
+                            stuff. We’ll handle the rest.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- contractor residential //-->
+        <div id="gsp_contractor_residential" class="gsp_step" style="display:none">
+            
+
+            <img decoding="async" src="https://billd.com/wp-content/plugins/get-started/img/contractors.png">
+            <h2>We purchase materials for commercial jobs only.</h2>
+            <p>Do you work any commercial projects?<br>If so, approximately how many per year?</p>
+
+            <div ng-app="myapp" class="ng-scope">
+                <div class="gsp_slider">
+                    <div ng-controller="TestController as vm">
+                        <rzslider rz-slider-model="vm.priceSlider.value" rz-slider-options="vm.priceSlider.options"></rzslider>
+                    </div>
+                </div>
+            </div>
+            <div id="gspgr_contractor_residential" class="gsp_tooltip gsp_hidden">
+                <span id="gsp_info_contractor_residential_0" class="gsp_hidden">
+                    <b>Cool!</b>
+                    A handful of commercial jobs each year.</span>
+                <span id="gsp_info_contractor_residential_1" class="gsp_hidden">
+                     <b>Awesome!</b>
+                    We can definitely work with you. 
+                </span>
+            </div>
+             
+            <script data-minify="1" src="https://billd.com/wp-content/cache/min/1/ajax/libs/angularjs/1.4.3/angular.min.js?ver=1698763484"></script>
+            <script data-minify="1" src="https://billd.com/wp-content/cache/min/1/rzajac/angularjs-slider/master/dist/rzslider.js?ver=1698763484"></script>
+
+            <script type="text/javascript">
+                var myApp = angular.module("myapp", ["rzSlider"]);
+                var gsp_residentialJobs = 0;
+                myApp.controller("TestController", TestController);
+
+                function TestController() {
+                    var vm = this;
+                    vm.priceSlider = {
+                        value: 0,
+                        options: {
+                            id: "slider-id",
+                            floor: 0,
+                            ceil: 10,
+                            autoHideLimitLabels: false,
+                            showSelectionBar: true,
+                            onChange: function(id) {
+                                gsp_cresidential(vm.priceSlider.value)
+                            },
+                            translate: function(value) {
+                                if (value == 10) return value + "+"
+                                else return value
+                            },
+
+                        }
+                    }
+                }
+            </script>
+            <button id="gspb_contractor_residential" type="button" class="gsp_button hvr-icon-forward">NEXT</button>
+            <div class="gsp_back" onclick="gspa_back('contractor_residential', 'contractor')"></div>
+        </div>
+
+        <!-- contractor commercial revenue //-->
+        <div id="gsp_contractor_commercial_revenue" class="gsp_step" style="display:none">
+        
+            <img decoding="async" src="https://billd.com/wp-content/plugins/get-started/img/contractors.png">
+            <h2>Awesome.</h2>
+            <p>What's your business's annual revenue?</p>
+            <div class="gsp_options">
+                <div class="gsp_option">
+                    <input id="gsp_contractor_commercial_revenue_0" type="radio" name="revenue" value="under1M" class="gsp_radio">
+                    <label for="gsp_contractor_commercial_revenue_0">Under $1M</label>
+                </div>
+                <div class="gsp_option">
+                    <input id="gsp_contractor_commercial_revenue_1" type="radio" name="revenue" value="1M_10M" class="gsp_radio">
+                    <label for="gsp_contractor_commercial_revenue_1">$1M - $10M</label>
+                </div>
+                <div class="gsp_option">
+                    <input id="gsp_contractor_commercial_revenue_2" type="radio" name="revenue" value="10Mplus" class="gsp_radio">
+                    <label for="gsp_contractor_commercial_revenue_2">Over $10M</label>
+                </div>
+                
+            </div>
+            <div id="gspgr_contractor_commercial_revenue" class="gsp_tooltip gsp_hidden">
+                <span id="gsp_info_contractor_commercial_revenue_0" class="gsp_hidden"><b>Nice!</b> Let’s keep going here.</span>
+                <span id="gsp_info_contractor_commercial_revenue_1" class="gsp_hidden"><b>Nice!</b> Let’s keep going here.</span>
+                <span id="gsp_info_contractor_commercial_revenue_2" class="gsp_hidden"><b>Nice!</b> Let’s keep going here.</span>
+            </div>
+            <button id="gspb_contractor_commercial_revenue" type="button" class="gsp_button  gsp_notactive hvr-icon-forward">NEXT</button>
+            <div class="gsp_back" onclick="gspa_back('contractor_commercial_revenue', 'contractor')"></div>
+                <div class="loggi">Already have an account? <a href="https://app.billd.com/login" target="_blank">Login</a></div>
+    
+        </div>    
+
+        <div id="gsp_ccrevenue_schedule" style="display:none">
+            <div id="gsp_ccrevenue_calendar"></div>
+            <div class="gsp_back" onclick="gspa_back('ccrevenue_schedule', 'contractor_commercial_revenue')"></div>
+        </div>
+
+
+       
+        <div id="gsp_supplier" class="gsp_step" style="display:none">
+            <img decoding="async" src="https://billd.com/wp-content/plugins/get-started/img/suppliers.png">
+            <h2>Let’s Connect.</h2>
+             <p>Please schedule a call to learn more about<br> our Partner Supplier program. </p>
+            <div class="gsp_options2">
+                <div class="gsp_option">
+                    <input id="gsp_supplier_0" type="radio" name="suppliertype" value="schedule" class="gsp_radio">
+                    <label for="gsp_supplier_0">Schedule a Call</label>
+                </div>
+                <!--div class="gsp_option">
+                    <input id="gsp_supplier_1" type="radio" name="suppliertype" value="sign" class="gsp_radio" />
+                    <label for="gsp_supplier_1">Enroll for Free</label>
+                </div-->
+            </div>
+            <div id="gspgr_supplier" class="gsp_tooltip gsp_hidden">
+                <span id="gsp_info_supplier_0" class="gsp_hidden">
+                    <b>Great!</b>
+                    We’re excited to talk to you.</span>
+                <span id="gsp_info_supplier_1" class="gsp_hidden">
+                    <b>You got it!</b> One step closer to learning more.
+                </span>
+            </div>
+            <button id="gspb_supplier" type="button" class="gsp_button  gsp_notactive hvr-icon-forward">NEXT</button>
+            <div class="gsp_back" onclick="gspa_back('supplier', 'main')"></div>
+            
+            <div class="loggi">Already have an account? <a href="https://app.billd.com/login-supplier" target="_blank">Login</a></div>
+        </div>
+
+        <div id="gsp_supplier_sign" class="gsp_step" style="display:none">
+        <br>
+            
+            
+            <div id="gsp_ssign_message"></div> 
+            <div id="gsp_ssign_ct">   
+            <h2>Enter Info to Learn More.</h2>
+                <input id="gsp_ssign_fname" placeholder="First name" class="gsp_input gsp_hgap">
+                <input id="gsp_ssign_lname" placeholder="Last name" class="gsp_input gsp_hgap">
+                <input id="gsp_ssign_company" placeholder="Company" class="gsp_input gsp_hgap">
+                <input id="gsp_ssign_email" placeholder="Email address" class="gsp_input gsp_hgap">
+                <input id="gsp_ssign_phone" placeholder="Phone number" class="gsp_input gsp_hgap" inputmode="text">
+                <div style="text-align:left" class="clicker">
+                    <input id="gsp_ssign_iam_0" type="radio" name="gsp_ssign_iam" value="1" class="gsp_radio" onclick="gsp_ch_ssign('supplier_sign')"> <label for="gsp_ssign_iam_0">I am a Material Supplier</label>
+                </div>
+            
+                <button id="gspb_supplier_sign" type="button" class="gsp_button gsp_notactive hvr-icon-forward">NEXT</button>
+            </div>            
+            
+            <div class="gsp_back" onclick="gspa_back('supplier_sign', 'supplier')"></div>
+        </div>
+
+
+        <!-- supplier NEW //-->
+
+       <!-- <div id="gsp_supplier" class="gsp_step" style="display:none">
+            <img decoding="async" src="https://billd.com/wp-content/plugins/get-started/img/suppliers.png" />
+            <h2>Let’s Connect.</h2>
+            <p>Please schedule a call to learn more about<br> our Partner Supplier program. </p>
+            <div class="gsp_options2" style="display:none">
+                <div class="gsp_option">
+                    <input id="gsp_supplier_0" type="radio" name="suppliertype" value="schedule" class="gsp_radio" checked/>
+                    <label for="gsp_supplier_0">Let’s Schedule a Call</label>
+                </div>
+            
+            </div>
+            <div id="gspgr_supplier" class="gsp_tooltip gsp_hidden">
+                <span id="gsp_info_supplier_0" class="gsp_hidden">
+                    <b>Great!</b>
+                    We’re excited to talk to you.</span>
+                <span id="gsp_info_supplier_1" class="gsp_hidden">
+                    <b>You got it!</b> We like that you are taking control.
+                </span>
+            </div>
+            <button id="gspb_supplier" type="button" class="gsp_button hvr-icon-forward">Schedule a Call</button>
+            <div class="gsp_back" onclick="gspa_back('supplier', 'main')"></div>
+            
+            <div class="loggi">Already have an account? <a href="https://app.billd.com/login-supplier" target="_blank">Login</a></div>
+        </div>
+//-->
+
+        
+        <div id="gsp_supplier_schedule" style="display:none">
+            <div id="gsp_supplier_calendar"></div>
+            <div class="gsp_back" onclick="gspa_back('supplier_schedule', 'supplier')"></div>
+        </div>
+
+        <div id="gsp_supplier_form" style="display:none">
+            <div class="gsp_flex">
+                <div class="gsp_form_left">
+               
+            <h3>Enter your email for next steps.</h3>
+
+                    <input id="gsp_supplier_form_email" class="gsp_input" placeholder="Enter your email address" onkeyup="gsp_email_check(this)">
+                    <button id="gspb_supplier_form" type="button" class="gsp_button gsp_submit  gsp_notactive hvr-icon-forward">NEXT</button>
+
+                        <p class="gsp_small">
+                        By continuing, you accept Billd’s <a href="https://billd.com/terms-of-use">Terms of Use</a> and
+                        <a href="https://billd.com/privacy-policy">Privacy Policy</a>.
+                    </p>
+
+                    <div class="gsp_back" onclick="gspa_back('supplier_form', 'supplier')"></div>
+
+                </div>
+                <div class="gsp_form_info">
+                    <div class="gsp_row">
+                        <div class="gsp_row_icon"><img decoding="async" src="https://billd.com/wp-content/plugins/get-started/img/wall.png"></div>
+                        <div class="gsp_row_text">
+                            <strong>Upfront Cash Payments, Every Time</strong>
+                            Eliminate unnecessary risk &amp; operational burdens.
+                        </div>
+                    </div>
+                    <div class="gsp_row">
+                        <div class="gsp_row_icon"><img decoding="async" src="https://billd.com/wp-content/plugins/get-started/img/shield.png"></div>
+                        <div class="gsp_row_text">
+                            <strong>Enhance Customer Relationships</strong>
+                            Eliminate the need to negotiate terms &amp; stop chasing
+                            customers for delayed payments.
+                        </div>
+                    </div>
+                    <div class="gsp_row">
+                        <div class="gsp_row_icon"><img decoding="async" src="https://billd.com/wp-content/plugins/get-started/img/chart.png">
+                        </div>
+                        <div class="gsp_row_text">
+                            <strong>Increase Sales</strong>
+                            Shut the door on competition by providing customers
+                            unlimited terms.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <!-- affiliate //-->
+        <div id="gsp_affiliate" class="gsp_step" style="display:none">
+            <img decoding="async" src="https://billd.com/wp-content/plugins/get-started/img/affiliates.png">
+            <h2>Great.</h2>
+            <p>What best describes your business type?</p>
+            <div class="gsp_options">
+                <div class="gsp_option">
+                    <input id="gsp_affiliate_0" type="radio" name="affiliatetype" value="media" class="gsp_radio">
+                    <label for="gsp_affiliate_0">Construction Media</label>
+                </div>
+                <div class="gsp_option">
+                    <input id="gsp_affiliate_1" type="radio" name="affiliatetype" value="finance" class="gsp_radio">
+                    <label for="gsp_affiliate_1">Finance Broker</label>
+                </div>
+                <div class="gsp_option">
+                    <input id="gsp_affiliate_2" type="radio" name="affiliatetype" value="software" class="gsp_radio">
+                    <label for="gsp_affiliate_2">Construction Software</label>
+                </div>
+            </div>
+            <div id="gspgr_affiliate" class="gsp_tooltip gsp_hidden">
+                <span id="gsp_info_affiliate_0" class="gsp_hidden">
+                    <b>Perfect!</b>
+                    Let’s collaborate.</span>
+                <span id="gsp_info_affiliate_1" class="gsp_hidden">
+                    <b>Great!</b>
+                    Let’s collaborate.</span>
+                
+                <span id="gsp_info_affiliate_2" class="gsp_hidden">
+                    <b>Good to know!</b>
+                    Let’s collaborate.</span>
+                
+            </div>
+            <button id="gspb_affiliate" type="button" class="gsp_button  gsp_notactive hvr-icon-forward">NEXT </button>
+            <div class="gsp_back" onclick="gspa_back('affiliate', 'main')"></div>
+        </div>
+
+        <div id="gsp_affiliate_finance" class="gsp_step" style="display:none">
+        <img decoding="async" src="https://billd.com/wp-content/plugins/get-started/img/affiliates.png">
+        <h2>Let’s Connect.</h2>
+        <p>Choose how you'd like to connect!</p>
+        <div class="gsp_options2">
+            <div class="gsp_option">
+                <input id="gsp_affiliate_finance_0" type="radio" name="afinancetype" value="schedule" class="gsp_radio">
+                <label for="gsp_affiliate_finance_0">Schedule a Call</label>
+            </div>
+            <div class="gsp_option">
+                <input id="gsp_affiliate_finance_1" type="radio" name="afinancetype" value="sign" class="gsp_radio">
+                <label for="gsp_affiliate_finance_1">Enroll for Free</label>
+            </div>
+        </div>
+        <div id="gspgr_affiliate_finance" class="gsp_tooltip gsp_hidden">
+            <span id="gsp_info_affiliate_finance_0" class="gsp_hidden">
+                <b>Great!</b>
+                We’re excited to talk to you.</span>
+            <span id="gsp_info_affiliate_finance_1" class="gsp_hidden">
+                <b>You got it!</b> One step closer to learning more.
+            </span>
+        </div>
+        <button id="gspb_affiliate_finance" type="button" class="gsp_button  gsp_notactive hvr-icon-forward">NEXT</button>
+        <div class="gsp_back" onclick="gspa_back('affiliate_finance', 'affiliate')"></div>
+        
+        <div class="loggi">Already have an account? <a href="https://app.billd.com/login" target="_blank">Login</a></div>
+        </div>        
+
+
+        <div id="gsp_affiliate_form" style="display:none">
+            <div class="gsp_flex">
+                <div class="gsp_form_left">
+             
+            <h3>Enter your email to schedule a call.</h3>
+
+                    <input id="gsp_affiliate_form_email" class="gsp_input" placeholder="Enter your email address" onkeyup="gsp_email_check(this)">
+                    <button id="gspb_affiliate_form" type="button" class="gsp_button gsp_submit  gsp_notactive hvr-icon-forward">NEXT</button>
+
+                    <p class="gsp_small">
+                        By continuing, you accept Billd’s <a href="https://billd.com/terms-of-use">Terms of Use</a> and
+                        <a href="https://billd.com/privacy-policy">Privacy Policy</a>.
+                    </p>
+
+                    <div class="gsp_back" onclick="gspa_back('affiliate_form', 'affiliate')"></div>
+
+                </div>
+                <div class="gsp_form_info">
+                    <div class="gsp_row">
+                        <div class="gsp_row_icon"><img decoding="async" src="https://billd.com/wp-content/plugins/get-started/img/circle.png"></div>
+                        <div class="gsp_row_text">
+                            <strong>Fast approval and processing</strong>
+                            Fund materials as quickly as same-day.
+                        </div>
+                    </div>
+                    <div class="gsp_row">
+                        <div class="gsp_row_icon"><img decoding="async" src="https://billd.com/wp-content/plugins/get-started/img/chart.png"></div>
+                        <div class="gsp_row_text">
+                            <strong>120-day terms</strong>
+                            We’ll pay for your materials up-front and give you
+                            120 days to repay it.
+                        </div>
+                    </div>
+                    <div class="gsp_row">
+                        <div class="gsp_row_icon"><img decoding="async" src="https://billd.com/wp-content/plugins/get-started/img/houses.png">
+                        </div>
+                        <div class="gsp_row_text">
+                            <strong>Focus on building, stress free</strong>
+                            Focus your time on what you do best, building cool
+                            stuff. We’ll handle the rest.
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+
+       <div id="gsp_affiliate_schedule" style="display:none">
+            <div id="gsp_affiliate_calendar"></div>
+            <div class="gsp_back" onclick="gspa_back('affiliate_schedule', 'affiliate')"></div>
+       </div>
+    </form>
+</div>
